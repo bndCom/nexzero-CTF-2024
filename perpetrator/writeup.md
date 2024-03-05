@@ -51,9 +51,9 @@ Cmd #15 @ 0x280158: ?
 Cmd #16 @ 0x221d690:
 ```
 
-- My doubt led me to search about the other process **mstsc.exe**, I found that it is responsible for creating and launching a Remote Desktop Connection and for producing the **cache** which contains bitmap images for the screen during the session, from the previous challenge `Cache` and some searching I found that this process really contains bitmap images in its **process memory**.
+- My doubt led me to search about the other process **mstsc.exe**, I found that it is responsible for creating and launching a Remote Desktop Connection and for producing the **cache** which contains bitmap images for the screen during the session, from the previous challenge `Remote Digital Problems` and some searching I found that this process really contains bitmap images in its **process memory**.
 
-- You can dump the memory of this process and then open it using `grimp`, and by adjusting the **offset** and **width** you will find something like the picture bellow. Keep looking until you find the real flag.
+- You can dump the memory of this process and then open it using `gimp`, and by adjusting the **offset** and **width** you will find something like the picture bellow. Keep looking until you find the real flag.
 
 ```sh
 └─$ python3 /opt/volatility/vol.py -f dump.mem windows.memmap --dump --pid 2304
